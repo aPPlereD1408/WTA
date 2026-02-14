@@ -1,0 +1,33 @@
+= Docu-Demo Projekt Dokumentation
+:toc: left
+:toclevels: 3
+
+== Einführung
+Dies ist die Dokumentation für das Docu-Demo Projekt.
+Ziel ist es, zu zeigen, wie Docker, Spring Boot und verschiedene Doku-Tools zusammenspielen.
+
+== Architektur
+Das System besteht aus zwei Containern:
+1. **API Service** (Spring Boot)
+2. **Datenbank** (PostgreSQL)
+
+[plantuml, ziel-diagramm, png]
+----
+node "Docker Host" {
+  component [Spring Boot API] as api
+  database [PostgreSQL] as db
+}
+api --> db : JDBC (Port 5432)
+----
+
+== Setup Anleitung
+Um das Projekt zu starten:
+
+[source,bash]
+----
+docker-compose up --build
+----
+
+== API Dokumentation
+Die interaktive API-Dokumentation findest du unter:
+http://localhost:8080/swagger-ui/index.html
