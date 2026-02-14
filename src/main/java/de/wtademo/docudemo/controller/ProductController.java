@@ -1,7 +1,7 @@
 package de.wtademo.docudemo.controller;
 
-import de.wtademo.docudemo.model.Product;     // WICHTIG: de.wtademo...
-import de.wtademo.docudemo.service.ProductService; // WICHTIG: de.wtademo...
+import de.wtademo.docudemo.model.Product;
+import de.wtademo.docudemo.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;

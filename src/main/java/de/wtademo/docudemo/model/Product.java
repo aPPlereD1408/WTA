@@ -8,7 +8,7 @@ import lombok.Data;
  * Repräsentiert ein Produkt im Katalog.
  * Dies ist die JPA Entity, die auf die Tabelle 'products' gemappt wird.
  *
- * @author Dein Name
+ * @author Gereon Krümmling inkl. Google Gemini
  */
 @Entity
 @Data
