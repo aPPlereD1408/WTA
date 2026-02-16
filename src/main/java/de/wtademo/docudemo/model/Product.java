@@ -30,6 +30,8 @@ public class Product {
 
     /**
      * Eine kurze Beschreibung des Produkts. Optionales Feld.
+     * 
+     * Macht hier Dokumentation Sinn?
      */
     @Schema(description = "Optionale Beschreibung")
     private String description;
