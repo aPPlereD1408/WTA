@@ -20,18 +20,10 @@ public class ProductController {
 
     private final ProductService service;
 
-    /**
-     * Initialisiert den Controller mit dem erforderlichen {@link ProductService}.
-     * @param service Der Service zur Persistenzierung und Abfrage von Produkten.
-     */
     public ProductController(ProductService service) {
         this.service = service;
     }
 
-    /**
-     * Ruft den aktuellen Bestand aller Produkte ab.
-     * * @return List<Product> Eine Liste aller in der Datenbank persistierten Produkte.
-     */
     @GetMapping
     @Operation(summary = "Abruf aller Produkte", 
                description = "Führt eine Datenbankabfrage über den ProductService aus und liefert die Ergebnismenge als JSON-Array zurück.")
@@ -39,12 +31,13 @@ public class ProductController {
         return service.findAll();
     }
 
-    /**
-     * Persistiert ein neues Produktobjekt.
-     * * @param product Das zu speichernde Produkt-Objekt im RequestBody.
-     * @return Product Das erfolgreich gespeicherte Objekt inklusive generierter Identifikatoren.
-     * @throws RuntimeException bei Validierungsfehlern oder Datenbankkonflikten.
-     */
+    /* @GetMapping("/{id}")
+    @Operation(summary = "Abruf eines Produkts", 
+               description = "Führt eine Datenbankabfrage über den ProductService aus und liefert das Produkt mit der angegebenen ID als JSON-Objekt zurück. Weitere Beschriebung folgt....")
+    public Product getProductById(@PathVariable Long id) {
+        return service.findById(id);
+    } */
+
     @PostMapping
     @Operation(summary = "Produkterstellung",
                responses = {
