@@ -8,7 +8,7 @@ import lombok.Data;
  * Repräsentiert ein Produkt im Katalog.
  * Dies ist die JPA Entity, die auf die Tabelle 'products' gemappt wird.
  *
- * @author Gereon Krümmling inkl. Google Gemini
+ * @author Google Gemini
  */
 @Entity
 @Data
@@ -29,7 +29,7 @@ public class Product {
     private Double price;
 
     /**
-     * Eine kurze Beschreibung, max 255 Zeichen.
+     * Eine kurze Beschreibung des Produkts. Optionales Feld.
      */
     @Schema(description = "Optionale Beschreibung")
     private String description;
